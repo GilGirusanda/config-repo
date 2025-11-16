@@ -8,7 +8,7 @@ spring:
     password: yehorfury!
     driver-class-name: org.postgresql.Driver
   config:
-    import: optional:configserver:http://config-service:8888
+    import: configserver:http://config-service:8888
 
 eureka:
   client:
