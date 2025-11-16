@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-server:5432/chatapp_user_service
+    username: admin
+    password: yehorfury!
+    driver-class-name: org.postgresql.Driver
+  cloud:
+    config:
+      uri: http://config-service:8888
+      fail-fast: true
+      retry:
+        max-attempts: 10
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka
