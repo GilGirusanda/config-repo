@@ -7,12 +7,8 @@ spring:
     username: ${USER_DB_USERNAME}
     password: ${USER_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
-  cloud:
-    config:
-      uri: ${CONFIG_SERVICE_URL}
-      fail-fast: true
-      retry:
-        max-attempts: 10
+  config:
+    import: ${CONFIG_SERVICE_URL}
 
 eureka:
   client:
